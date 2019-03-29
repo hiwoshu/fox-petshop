@@ -1,16 +1,12 @@
 import React from 'react';
+import styled from 'styled-components'
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  Container } from 'reactstrap';
 
 export default class NavbarTop extends React.Component {
   constructor(props) {
@@ -29,38 +25,42 @@ export default class NavbarTop extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="#">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+        <Topbar expand="md">
+          <Container>
+            <Logobar href="#">Fox PetShop</Logobar>
+
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Components</NavLink>
+                <Linkbar href="#">Sair</Linkbar>
               </NavItem>
-              <NavItem>
-                <NavLink href="#">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
-          </Collapse>
-        </Navbar>
+          </Container>
+        </Topbar>
       </div>
     );
   }
 }
+
+const Topbar = styled(Navbar)`
+  background-color: #00374b!important;
+`
+
+const Logobar = styled(NavbarBrand)`
+  color: #ec8433;
+  &:hover {
+    color: #ec8433;
+  }
+  &:visited {
+    color: #ec8433;
+  }
+`
+
+const Linkbar = styled(NavLink)`
+  color: #ec8433;
+  &:hover {
+    color: #ec8433;
+  }
+  &:visited {
+    color: #ec8433;
+  }
+`
