@@ -36,6 +36,7 @@ Utilizando boas práticas para criar e manter banco de dados relacionais.
 * [create-react-app](https://github.com/facebook/create-react-app)
 * [material/ui](https://material-ui.com/)
 * [reactstrap](https://reactstrap.github.io/)
+* [styled-components](https://www.styled-components.com/)
 
 ### Autor
 
