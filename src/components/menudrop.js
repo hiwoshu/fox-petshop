@@ -37,16 +37,13 @@ const DropToggle = styled(DropdownToggle)`
     color: #00374b!important;
     background-color: #ec8433!important;
   }
-  &:first-child::active {
-    background-color: #ec8433!important;
-    color: #00374b!important;
-  }
 `
 
 const DropMenu = styled(DropdownMenu)`
   color: #ec8433!important;
   background-color: #00374b!important;
   border-color: #ec8433!important;
+  margin-top: .3rem!important;
 `
 
 const DropItem = styled(DropdownItem)`
@@ -54,6 +51,7 @@ const DropItem = styled(DropdownItem)`
   &:hover {
     color: #00374b!important;
     background-color: #ffcca5!important;
+    outline: none!important;
   }
 `
 

@@ -42,7 +42,7 @@ export default class NavbarTop extends React.Component {
               <Dropdown title='Consultas' options={list2} />
             </Nav>
 
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto" navbar pills>
               <NavItem>
                 <Linkbar href="#">Sair</Linkbar>
               </NavItem>
@@ -75,9 +75,11 @@ const Linkbar = styled(NavLink)`
   color: #ec8433;
   text-transform: uppercase;
   &:hover {
-    color: #ec8433;
+    color: #00374b;
+    background-color: #ec8433;
   }
-  &:visited {
-    color: #ec8433;
+  &:active {
+    color: #00374b;
+    background-color: #ec8433;
   }
 `
