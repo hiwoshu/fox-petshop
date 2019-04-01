@@ -3,22 +3,21 @@ import styled from 'styled-components'
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import t from 'prop-types'
 
-export default function Menudrop ({ title, options }) {
-  return (
-    <Dropdown nav>
-      <DropToggle nav caret>
-        {title}
-      </DropToggle>
-      <DropMenu>
-        {options.map(item =>
-          <DropItem key={item}>{item}</DropItem>
-        )}
-        <DropItem divider />
-        <DropItem>Funcionário</DropItem>
-      </DropMenu>
-    </Dropdown>
-  );
-}
+const Menudrop = ({ title, options }) => (
+  <Dropdown nav>
+    <DropToggle nav caret>
+      {title}
+    </DropToggle>
+    <DropMenu>
+      {options.map(item =>
+        <DropItem key={item}>{item}</DropItem>
+      )}
+      <DropItem divider />
+      <DropItem>Funcionário</DropItem>
+    </DropMenu>
+  </Dropdown>
+)
+
 
 const Dropdown = styled(UncontrolledDropdown)`
   color: #ec8433;
@@ -59,3 +58,5 @@ Menudrop.propTypes = {
   title: t.string.isRequired,
   options: t.array.isRequired
 }
+
+export default Menudrop;
