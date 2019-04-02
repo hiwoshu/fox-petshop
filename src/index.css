@@ -3,7 +3,10 @@
   src: url('fonts/Proxima-Nova-Alt-Regular.otf') format('opentype');
 }
 
-* {font-family: "Proxima Nova Alt";}
+* {
+  font-family: "Proxima Nova Alt";
+  color: #ec8433;
+}
 
 body {
   margin: 0;
