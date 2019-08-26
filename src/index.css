@@ -12,6 +12,12 @@ body {
   margin: 0;
   padding: 0;
   color: #ec8433;
+  background-color: #006e96;
+  background-image: url(img/background.png);
+  background-attachment: fixed;
+  background-position: right 3.125rem;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
   font-family: "Proxima Nova Alt";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
