@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Navbar from 'components/navbartop'
 import MainContent from 'components/maincontent'
 
@@ -9,8 +9,8 @@ class App extends Component {
         <Navbar />
         <MainContent />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

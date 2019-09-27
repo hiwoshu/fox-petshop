@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 import {
   Navbar,
@@ -6,63 +6,71 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Container } from 'reactstrap';
-  import Dropdown from 'components/menudrop.js'
+  Container
+} from 'reactstrap'
+import Dropdown from 'components/menudrop.js'
 import Logo from 'img/logo.png'
 
 export default class NavbarTop extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
     this.state = {
       isOpen: false
-    };
+    }
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
-    });
+    })
   }
   render() {
     const list1 = ['Cliente', 'Produto', 'Serviço', 'Fornecedor']
-    const list2 = list1
-    list2.push('Vendas')
 
     return (
-      <div>
-        <Topbar expand="md" >
-          <Container>
-            <Logobar href="#"><img src={Logo} width='50px' height='50px' alt='logo' style={{ margin: 0, padding: 0 }} />Fox PetShop</Logobar>
-            <Nav pills>
-              <NavItem>
-                <Linkbar href="#">Venda</Linkbar>
-              </NavItem>
-              <Dropdown title='Cadastros' options={list1} />
-              <Dropdown title='Consultas' options={list2} />
-            </Nav>
+      <Topbar expand="md">
+        <Container>
+          <Logobar href="#">
+            <img
+              src={Logo}
+              width="50px"
+              height="50px"
+              alt="logo"
+              style={{ margin: 0, padding: 0, marginRight: '10px' }}
+            />
+            Fox PetShop
+          </Logobar>
+          <Nav pills>
+            <NavItem>
+              <Linkbar href="#">Venda</Linkbar>
+            </NavItem>
+            <Dropdown title="Cadastros" options={list1} />
+            <NavItem>
+              <Linkbar href="#">Buscas</Linkbar>
+            </NavItem>
+          </Nav>
 
-            <Nav className="ml-auto" navbar pills>
-              <NavItem>
-                <Linkbar href="#">Sair</Linkbar>
-              </NavItem>
-            </Nav>
-          </Container>
-        </Topbar>
-      </div>
-    );
+          <Nav className="ml-auto" navbar pills>
+            <NavItem>
+              <Linkbar href="#">Sair</Linkbar>
+            </NavItem>
+          </Nav>
+        </Container>
+      </Topbar>
+    )
   }
 }
 
 const Topbar = styled(Navbar)`
-  background-color: #00374b!important;
-  padding: 0 1rem!important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  background-color: #00374b !important;
+  padding: 0 1rem !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 `
 
 const Logobar = styled(NavbarBrand)`
   color: #ec8433;
-  padding: 0!important;
+  padding: 0 !important;
   &:hover {
     color: #ec8433;
   }

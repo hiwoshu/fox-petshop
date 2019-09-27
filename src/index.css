@@ -1,10 +1,10 @@
-@font-face{
+@font-face {
   font-family: 'Proxima Nova Alt';
   src: url('fonts/Proxima-Nova-Alt-Regular.otf') format('opentype');
 }
 
 * {
-  font-family: "Proxima Nova Alt";
+  font-family: 'Proxima Nova Alt';
   color: #ec8433;
 }
 
@@ -18,13 +18,13 @@ body {
   background-position: right 3.125rem;
   background-repeat: no-repeat;
   background-blend-mode: luminosity;
-  font-family: "Proxima Nova Alt";
+  font-family: 'Proxima Nova Alt';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -34,6 +34,31 @@ code {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #00374b!important;
-  background-color: #ec8433!important;
+  color: #00374b !important;
+  background-color: #ec8433 !important;
+}
+
+.thumb-horizontal {
+  background-color: rgba(0, 54, 74, 0.8) !important;
+}
+
+.full-size {
+  height: calc(100vh - 50px) !important;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #ec8433;
+  opacity: 0.6;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ec8433;
+  opacity: 0.6;
+}
+
+::placeholder {
+  color: #ec8433;
+  opacity: 0.6;
 }

@@ -1,22 +1,22 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'reactstrap';
-import Card from 'components/cardcontent'
+import { Container, Row, Col } from 'reactstrap'
+import CardVenda from 'components/venda/card-venda'
+import SecondCustomScrollbar from 'components/utils/secondCustomScrollbar.js'
 
-const MainContent = () =>(
-  <div>
+const MainContent = () => (
+  <SecondCustomScrollbar>
     <Container>
       <Row>
         <Col>
           <Mdiv>
-            <Card />
+            <CardVenda />
           </Mdiv>
         </Col>
       </Row>
     </Container>
-  </div>
+  </SecondCustomScrollbar>
 )
-
 
 const Mdiv = styled.div`
   width: 100%;
