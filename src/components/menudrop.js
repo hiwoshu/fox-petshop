@@ -6,19 +6,18 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-import t from 'prop-types'
+import { NavLink as Link } from 'react-router-dom'
 
-const Menudrop = ({ title, options }) => (
+const Menudrop = () => (
   <Dropdown nav>
-    <DropToggle nav caret>
-      {title}
-    </DropToggle>
+    <DropToggle nav caret>Cadastros</DropToggle>
     <DropMenu>
-      {options.map(item => (
-        <DropItem key={item}>{item}</DropItem>
-      ))}
+      <DropItem><LinkNav to="/cliente" children="Cliente" /></DropItem>
+      <DropItem><LinkNav to="/produto" children="Produto" /></DropItem>
+      <DropItem><LinkNav to="/servico" children="Serviço" /></DropItem>
+      <DropItem><LinkNav to="/fornecedor" children="Fornecedor" /></DropItem>
       <DropItem divider />
-      <DropItem>Funcionário</DropItem>
+      <DropItem><LinkNav to="/funcionario" children="Funcionário" /></DropItem>
     </DropMenu>
   </Dropdown>
 )
@@ -58,9 +57,17 @@ const DropItem = styled(DropdownItem)`
   }
 `
 
-Menudrop.propTypes = {
-  title: t.string.isRequired,
-  options: t.array.isRequired
-}
+const LinkNav = styled(Link)`
+  color: #ec8433;
+  text-transform: uppercase;
+  &:hover {
+    color: #ec8433;
+    text-decoration: none;
+  }
+  &:active {
+    color: #00374b;
+    background-color: #ffcca5;
+  }
+`
 
 export default Menudrop

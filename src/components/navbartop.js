@@ -8,8 +8,9 @@ import {
   NavLink,
   Container
 } from 'reactstrap'
-import Dropdown from 'components/menudrop.js'
 import Logo from 'img/logo.png'
+import { NavLink as Link } from 'react-router-dom'
+import Menudrop from 'components/menudrop'
 
 export default class NavbarTop extends React.Component {
   constructor(props) {
@@ -26,12 +27,10 @@ export default class NavbarTop extends React.Component {
     })
   }
   render() {
-    const list1 = ['Cliente', 'Produto', 'Serviço', 'Fornecedor']
-
     return (
       <Topbar expand="md">
         <Container>
-          <Logobar href="#">
+          <Logobar tag={Link} to="/">
             <img
               src={Logo}
               width="50px"
@@ -42,19 +41,13 @@ export default class NavbarTop extends React.Component {
             Fox PetShop
           </Logobar>
           <Nav pills>
-            <NavItem>
-              <Linkbar href="#">Venda</Linkbar>
-            </NavItem>
-            <Dropdown title="Cadastros" options={list1} />
-            <NavItem>
-              <Linkbar href="#">Buscas</Linkbar>
-            </NavItem>
+            <NavItem><Linkbar tag={Link} to="/venda">Venda</Linkbar></NavItem>
+            <Menudrop />
+            <NavItem><Linkbar tag={Link} to="/buscas">Buscas</Linkbar></NavItem>
           </Nav>
 
           <Nav className="ml-auto" navbar pills>
-            <NavItem>
-              <Linkbar href="#">Sair</Linkbar>
-            </NavItem>
+            <NavItem><Linkbar tag={Link} to="/login">Sair</Linkbar></NavItem>
           </Nav>
         </Container>
       </Topbar>
@@ -83,8 +76,8 @@ const Linkbar = styled(NavLink)`
   color: #ec8433;
   text-transform: uppercase;
   &:hover {
-    color: #00374b;
-    background-color: #ec8433;
+    color: #ec8433;
+    text-decoration: none !important;
   }
   &:active {
     color: #00374b;
