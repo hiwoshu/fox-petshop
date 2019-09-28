@@ -2,8 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
 import CardVenda from 'components/venda/card-venda'
+import CardClient from 'components/cadastro/card-client'
+import CardForn from 'components/cadastro/card-forn'
+import CardFunc from 'components/cadastro/card-func'
+import CardProduto from 'components/cadastro/card-produto'
+import CardServico from 'components/cadastro/card-servico'
+import CardBusca from 'components/busca/card-busca'
 import SecondCustomScrollbar from 'components/utils/secondCustomScrollbar.js'
 import { Route, Switch } from 'react-router-dom'
+import Home from 'components/home.js'
 
 const MainContent = () => (
   <SecondCustomScrollbar>
@@ -12,13 +19,14 @@ const MainContent = () => (
         <Col>
           <Mdiv>
             <Switch>
+              <Route path='/' exact component={Home} />
               <Route path='/venda' exact component={CardVenda} />
-              <Route path='/cliente' exact component={Cliente} />
-              <Route path='/produto' exact component={Produto} />
-              <Route path='/servico' exact component={Servico} />
-              <Route path='/fornecedor' exact component={Fornecedor} />
-              <Route path='/funcionario' exact component={Funcionario} />
-              <Route path='/buscas' exact component={Buscas} />
+              <Route path='/cliente' exact component={CardClient} />
+              <Route path='/produto' exact component={CardProduto} />
+              <Route path='/servico' exact component={CardServico} />
+              <Route path='/fornecedor' exact component={CardForn} />
+              <Route path='/funcionario' exact component={CardFunc} />
+              <Route path='/buscas' exact component={CardBusca} />
             </Switch>
           </Mdiv>
         </Col>
@@ -34,22 +42,4 @@ const Mdiv = styled.div`
   bottom: 10px;
 `
 
-const Cliente = () => (
-  <h1>Cadastro de Cliente</h1>
-)
-const Produto = () => (
-  <h1>Cadastro de Produto</h1>
-)
-const Servico = () => (
-  <h1>Cadastro de Serviço</h1>
-)
-const Fornecedor = () => (
-  <h1>Cadastro de Fornecedor</h1>
-)
-const Funcionario = () => (
-  <h1>Cadastro de Funcionário</h1>
-)
-const Buscas = () => (
-  <h1>Buscas</h1>
-)
 export default MainContent
