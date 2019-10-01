@@ -1,17 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
-import CardVenda from 'components/venda/card-venda'
-import CardClient from 'components/cadastro/card-client'
-import CardForn from 'components/cadastro/card-forn'
-import CardFunc from 'components/cadastro/card-func'
-import CardProduto from 'components/cadastro/card-produto'
-import CardServico from 'components/cadastro/card-servico'
-import CardBusca from 'components/busca/card-busca'
-import SecondCustomScrollbar from 'components/utils/secondCustomScrollbar.js'
+import CardVenda from './venda/card-venda'
+import {
+  CardClient,
+  CardForn,
+  CardFunc,
+  CardProduto,
+  CardServico } from './cadastro'
+import CardBusca from './busca/card-busca'
+import SecondCustomScrollbar from './utils/secondCustomScrollbar.js'
 import { Route, Switch } from 'react-router-dom'
-import Home from 'components/home.js'
-import Error404 from 'components/error404'
+import Home from './home.js'
+import Error404 from './error404'
 
 const MainContent = () => (
   <SecondCustomScrollbar>

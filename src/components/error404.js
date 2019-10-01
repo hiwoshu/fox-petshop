@@ -17,14 +17,14 @@ const ErrDiv = styled.div`
 const H0 = styled.h1`
   font-size: 6rem;
   font-weight: 900;
-  text-shadow: 5px 5px #00374b;
+  text-shadow: 0px 5px #00374b;
   -webkit-text-stroke: 3px;
 `
 
 const HpageText = styled.h1`
   font-size: 3.4rem;
   font-weight: 900;
-  text-shadow: 5px 5px #00374b;
+  text-shadow: 0px 5px #00374b;
   -webkit-text-stroke: 2px;
 `
 
