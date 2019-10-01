@@ -1,23 +1,16 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, CardFooter, Col, Row } from 'reactstrap'
-import { OkButton, CancelButton } from 'components/buttons'
+import { Col, Row } from 'reactstrap'
+import MainCard from 'components/main-card'
+
+const ProdutoHeader = () => (
+  <Row>
+    <Col sm={4}><h4>Cadastro de Produto</h4></Col>
+    <Col></Col>
+  </Row>
+)
 
 const CardProduto = () => (
-  <Card id="Produto" style={{ borderRadius: '0.625rem' }}>
-    <CardHeader>
-      <Row>
-        <Col sm={4}><h4>Cadastro de Produto</h4></Col>
-        <Col></Col>
-      </Row>
-    </CardHeader>
-    <CardBody>
-
-    </CardBody>
-    <CardFooter style={{ justifyContent: 'space-between', display: 'flex' }}>
-      <OkButton />
-      <CancelButton />
-    </CardFooter>
-  </Card>
+  <MainCard id={'Produto'} header={<ProdutoHeader />} />
 )
 
 export default CardProduto
