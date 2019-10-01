@@ -11,6 +11,7 @@ import CardBusca from 'components/busca/card-busca'
 import SecondCustomScrollbar from 'components/utils/secondCustomScrollbar.js'
 import { Route, Switch } from 'react-router-dom'
 import Home from 'components/home.js'
+import Error404 from 'components/error404'
 
 const MainContent = () => (
   <SecondCustomScrollbar>
@@ -27,6 +28,7 @@ const MainContent = () => (
               <Route path='/fornecedor' exact component={CardForn} />
               <Route path='/funcionario' exact component={CardFunc} />
               <Route path='/buscas' exact component={CardBusca} />
+              <Route exact component={Error404} />
             </Switch>
           </Mdiv>
         </Col>
