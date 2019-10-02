@@ -7,7 +7,8 @@ import {
   CardForn,
   CardFunc,
   CardProduto,
-  CardServico } from './cadastro'
+  CardServico
+} from './cadastro'
 import CardBusca from './busca/card-busca'
 import SecondCustomScrollbar from './utils/secondCustomScrollbar.js'
 import { Route, Switch } from 'react-router-dom'
@@ -21,14 +22,14 @@ const MainContent = () => (
         <Col>
           <Mdiv>
             <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/venda' exact component={CardVenda} />
-              <Route path='/cliente' exact component={CardClient} />
-              <Route path='/produto' exact component={CardProduto} />
-              <Route path='/servico' exact component={CardServico} />
-              <Route path='/fornecedor' exact component={CardForn} />
-              <Route path='/funcionario' exact component={CardFunc} />
-              <Route path='/buscas' exact component={CardBusca} />
+              <Route path="/" exact component={Home} />
+              <Route path="/venda" exact component={CardVenda} />
+              <Route path="/cliente" exact component={CardClient} />
+              <Route path="/produto" exact component={CardProduto} />
+              <Route path="/servico" exact component={CardServico} />
+              <Route path="/fornecedor" exact component={CardForn} />
+              <Route path="/funcionario" exact component={CardFunc} />
+              <Route path="/buscas" exact component={CardBusca} />
               <Route exact component={Error404} />
             </Switch>
           </Mdiv>

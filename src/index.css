@@ -28,6 +28,26 @@ code {
     monospace;
 }
 
+.btn-primary,
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: #1398c9 !important;
+  border-color: #1398c9 !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff !important;
+  background-color: #00374b !important;
+  border-color: #00374b !important;
+}
+
 .dropdown-divider {
   border-top-color: #ec8433;
 }
@@ -36,6 +56,12 @@ code {
 .nav-pills .show > .nav-link {
   color: #00374b !important;
   background-color: #ec8433 !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: inherit;
+  background-color: #f5f5f7 !important;
+  border-color: #dee2e6 #dee2e6 #f5f5f7 !important;
 }
 
 .thumb-horizontal {

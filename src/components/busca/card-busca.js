@@ -1,17 +1,13 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap'
+import { Card, CardBody, CardHeader } from 'reactstrap'
+import NavBusca from './nav-busca'
 
 const CardBusca = () => (
   <Card id="Busca" style={{ borderRadius: '0.625rem' }}>
-    <CardHeader>
-      <Row>
-        <Col sm={4}><h4>Buscas</h4></Col>
-        <Col></Col>
-      </Row>
+    <CardHeader style={{ padding: '0' }}>
+      <NavBusca />
     </CardHeader>
-    <CardBody>
-
-    </CardBody>
+    <CardBody></CardBody>
   </Card>
 )
 

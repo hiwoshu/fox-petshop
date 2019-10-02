@@ -4,12 +4,8 @@ import { OkButton, CancelButton } from 'components/buttons'
 
 const MainCard = ({ id, header, body = null }) => (
   <Card id={id} style={{ borderRadius: '0.625rem' }}>
-    <CardHeader>
-      {header}
-    </CardHeader>
-    <CardBody>
-      {body}
-    </CardBody>
+    <CardHeader>{header}</CardHeader>
+    <CardBody>{body}</CardBody>
     <CardFooter style={{ justifyContent: 'space-between', display: 'flex' }}>
       <OkButton />
       <CancelButton />
