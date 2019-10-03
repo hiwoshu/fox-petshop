@@ -1,30 +1,28 @@
 ## Fox PetShop
 
-Projeto criado com base em um exercício acadêmico pretendendo produzir uma solução baseada em banco de dados, a partir de um caso fictício que busca ilustrar um problema real.
+Projeto criado com base em um exercício acadêmico pretendendo produzir uma solução web baseada em banco de dados, a partir de um caso fictício que busca ilustrar um problema real.
 
-Utilizando boas práticas para criar e manter banco de dados relacionais.
+### Proposta:
 
-### Exercício:
+> Nesse contexto, o modelo de dados abaixo refere-se a uma loja fictícia de pet shop que atende clientes e seus pets, na venda de produtos ou prestação de serviços. O banco de dados mantém o inventário de Produtos, fornece informações sobre produtos e serviços ofertados, registra as compras de produtos e serviços efetuadas, bem como mantém registro de clientes, seus animais de estimação e funcionários.
 
-> Nesse contexto, o modelo de dados abaixo refere-se a uma loja fictícia de pet shop que atende clientes e seus pets, para compra de produtos ou prestação de serviços. O banco de dados mantém o inventário de Produtos, fornece informações sobre produtos e serviços ofertados, registra as compras de produtos e serviços efetuados, bem como mantém registro de clientes, seus animais de estimação e funcionários. Para criar o banco de dados, serão necessários as seguintes regras de negócio:
+> O sistema possui os seguintes módulos:
 >
->  *   O banco de dados armazena informações sobre os clientes da loja. Para cada cliente, as informações armazenadas são: nome, cpf, data de nascimento, sexo, endereço, telefone e e-mail. Ademais, cada cliente possui um ou vários animais de estimação, cujas informações necessárias são: nome do pet, espécie, raça, sexo, e data de nascimento do pet (se o cliente souber).
+>  *   Login para restringir o acesso ao sistema
 >
->  *   É preciso saber quais são os produtos que a loja comercializa, tendo-se as seguintes informações: código de barras, nome, marca, tipo, fornecedor, valor de compra, valor de venda e quantidade em estoque.
+>  *   Venda: registro das informações de cada venda de produto e/ou serviço constando dados do cliente, pet, funcionário, data e hora do atendimento, lista de itens e valor total da venda.
 >
->  *   Em relação aos serviços, deve-se manter: descrição dos serviços fornecidos pela loja, valor e tempo de duração média.
+>  *   Cadastro de Clientes.
 >
->  *   Para fornecedores, é preciso manter: razão social, nome fantasia, cnpj, endereço, telefone e e-mail.
+>  *   Cadastro de Produtos.
 >
->  *   As informações dos funcionários necessárias são: nome, cargo, cpf, endereço, telefone e e-mail. Cada funcionário deve possuir sua própria credencial de acesso ao sistema.
+>  *   Cadastro de Serviços.
 >
->  *   Um cliente pode comprar vários produtos ou solicitar vários serviços para seu pet.
+>  *   Cadastro de Fornecedores.
 >
->  *   Um funcionário pode realizar vários serviços; um serviço é realizado por apenas um funcionário.
+>  *   Cadastro de Funcionários.
 >
->  *   Um pet pode ser atendido em diversos serviços; um serviço é prestado à apenas um pet.
->
->  *   O banco de dados deve manter informações de cada venda de produto ou serviço, a saber: o cliente que está solicitando o produto ou serviço, o funcionário que está atendendo o cliente, os produtos ou serviços comprados, a data e a hora da compra dos produtos ou serviços e o valor total da compra. Cada venda de produto ou serviço corresponde a um único cliente e a um único funcionário, mas podem conter vários produtos ou serviços comprados.
+>  *   Busca de informações cadastradas, relativas a cada um dos tópicos acima.
 
 ### Deployment
 
@@ -36,6 +34,7 @@ Utilizando boas práticas para criar e manter banco de dados relacionais.
 * [create-react-app](https://github.com/facebook/create-react-app)
 * [material/ui](https://material-ui.com/)
 * [reactstrap](https://reactstrap.github.io/)
+* [react-router](https://github.com/ReactTraining/react-router)
 * [styled-components](https://www.styled-components.com/)
 
 ### Autor
