@@ -116,7 +116,7 @@ export default class NavBusca extends Component {
         </Nav>
         <TabContent
           activeTab={this.state.activeTab}
-          style={{ padding: '.75rem 1.25rem' }}
+          style={{ padding: '.75rem 1.25rem', backgroundColor: '#f5f5f7' }}
         >
           <TabPane tabId="Cliente">
             <ButtonGroup style={{ margin: '0 0 20px 0' }}>
